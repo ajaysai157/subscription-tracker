@@ -1,0 +1,28 @@
+# Dependency directories
+node_modules/
+
+# Local environment variables and credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Visual Studio Code & IDE configs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Build production artifacts
+client/dist/
+server/dist/
