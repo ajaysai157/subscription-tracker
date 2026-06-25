@@ -29,10 +29,10 @@ const Auth = ({ onAuthSuccess }) => {
     try {
       const response = await axios.post(endpoint, { email, password });
       const { token, user } = response.data;
-      
+
       localStorage.setItem('token', token);
       localStorage.setItem('user', JSON.stringify(user));
-      
+
       onAuthSuccess(token, user);
     } catch (err) {
       console.error('Auth error:', err);
@@ -80,15 +80,15 @@ const Auth = ({ onAuthSuccess }) => {
           <div className="form-group">
             <label className="form-label" htmlFor="email-input">Email Address</label>
             <div style={{ position: 'relative' }}>
-              <Mail 
-                size={18} 
-                style={{ 
-                  position: 'absolute', 
-                  left: '14px', 
-                  top: '50%', 
-                  transform: 'translateY(-50%)', 
-                  color: 'var(--text-muted)' 
-                }} 
+              <Mail
+                size={18}
+                style={{
+                  position: 'absolute',
+                  left: '14px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  color: 'var(--text-muted)'
+                }}
               />
               <input
                 id="email-input"
@@ -106,15 +106,15 @@ const Auth = ({ onAuthSuccess }) => {
           <div className="form-group">
             <label className="form-label" htmlFor="password-input">Password</label>
             <div style={{ position: 'relative' }}>
-              <Lock 
-                size={18} 
-                style={{ 
-                  position: 'absolute', 
-                  left: '14px', 
-                  top: '50%', 
-                  transform: 'translateY(-50%)', 
-                  color: 'var(--text-muted)' 
-                }} 
+              <Lock
+                size={18}
+                style={{
+                  position: 'absolute',
+                  left: '14px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  color: 'var(--text-muted)'
+                }}
               />
               <input
                 id="password-input"
